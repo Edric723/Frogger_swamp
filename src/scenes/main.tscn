@@ -15,11 +15,11 @@ scale = Vector2(0.5, 0.5)
 [node name="spawner_obstaculos" type="Node" parent="."]
 
 [node name="linea_obstaculo" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
-position = Vector2(16, 0)
+position = Vector2(0, 16)
 velocidad = 150
 
 [node name="linea_obstaculo2" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
-position = Vector2(48, 0)
+position = Vector2(3, 70)
 contador_obstaculos = 5
 distancia_entre_obstaculos = 100
 velocidad = 150
@@ -40,7 +40,7 @@ position = Vector2(128, 0)
 velocidad = 150
 
 [node name="linea_obstaculo6" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
-position = Vector2(16, 0)
+position = Vector2(3, 42)
 velocidad = 150
 
 [node name="linea_obstaculo7" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
