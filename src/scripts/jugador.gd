@@ -11,6 +11,10 @@ const INCREMENTO_POSICION = 16
 
 var nueva_posicion : Vector2 = Vector2.ZERO
 
+func _ready() -> void:
+		animated_sprite_2d.play("idle_forward")
+	
+
 func _process(delta: float) -> void:
 	if nueva_posicion == Vector2.ZERO:
 		return
@@ -20,7 +24,7 @@ func _process(delta: float) -> void:
 	if position.distance_to(nueva_posicion) < 0.5:
 		position = nueva_posicion
 		nueva_posicion = Vector2.ZERO
-		animated_sprite_2d.play("idle")
+		handle_idle_animation();
 
 
 func _input(event: InputEvent) -> void:
@@ -32,10 +36,10 @@ func _input(event: InputEvent) -> void:
 	
 	if event.is_action_pressed("up"):
 		posicion_modificada = position + Vector2.UP * INCREMENTO_POSICION
-		animated_sprite_2d.play("idle")	
+		animated_sprite_2d.play("idle_backward")	
 	elif event.is_action_pressed("down"):
 		posicion_modificada = position + Vector2.DOWN * INCREMENTO_POSICION
-		animated_sprite_2d.play("idle")	
+		animated_sprite_2d.play("idle_forward")	
 	elif event.is_action_pressed("right"):
 		posicion_modificada = position + Vector2.RIGHT * INCREMENTO_POSICION
 		animated_sprite_2d.play("moving")
@@ -48,7 +52,13 @@ func _input(event: InputEvent) -> void:
 	if posicion_modificada:
 		mover_jugador(posicion_modificada)
 		
-	
+func handle_idle_animation() -> void:
+	match animated_sprite_2d.animation:
+		"up":
+			animated_sprite_2d.play("idle_backward")
+		"down":
+			animated_sprite_2d.play("idle_forward")
+				
 		
 	
 	
