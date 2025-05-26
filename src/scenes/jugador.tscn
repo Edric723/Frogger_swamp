@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://8ugbuspd7oas"]
+[gd_scene load_steps=14 format=3 uid="uid://8ugbuspd7oas"]
 
+[ext_resource type="Script" uid="uid://u4qwqdn5mqqo" path="res://src/scripts/jugador.gd" id="1_43by6"]
 [ext_resource type="Texture2D" uid="uid://dmurcjba3iqwn" path="res://_assets/Sprite_noAnim.png" id="1_fgn7w"]
 [ext_resource type="Texture2D" uid="uid://bfejxa0a7svl8" path="res://_assets/Sprite_noAnimDer.png" id="2_43by6"]
 
@@ -77,10 +78,17 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgn7w"]
+size = Vector2(16, 19)
+
 [node name="jugador" type="Area2D"]
+script = ExtResource("1_43by6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_45smq")
 animation = &"idle"
+frame_progress = 0.978437
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_fgn7w")
