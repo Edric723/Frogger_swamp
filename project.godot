@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="ProyectoFinal_PuentesK"
+run/main_scene="uid://brfaapyvl1v8q"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=576
-window/size/viewport_height=416
+window/size/viewport_width=288
+window/size/viewport_height=208
 window/stretch/mode="canvas_items"
 
 [rendering]
