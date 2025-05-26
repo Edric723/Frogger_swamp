@@ -11,10 +11,12 @@ const INCREMENTO_POSICION = 16
 
 var nueva_posicion : Vector2 = Vector2.ZERO
 
+# para que arranque de frente por default, ya animado.
 func _ready() -> void:
 		animated_sprite_2d.play("idle_forward")
 	
 
+# DELTA
 func _process(delta: float) -> void:
 	if nueva_posicion == Vector2.ZERO:
 		return
@@ -24,9 +26,10 @@ func _process(delta: float) -> void:
 	if position.distance_to(nueva_posicion) < 0.5:
 		position = nueva_posicion
 		nueva_posicion = Vector2.ZERO
-		handle_idle_animation();
+		#control_animation_idle();
 
 
+# INPUTS
 func _input(event: InputEvent) -> void:
 	var posicion_modificada
 	
@@ -52,16 +55,15 @@ func _input(event: InputEvent) -> void:
 	if posicion_modificada:
 		mover_jugador(posicion_modificada)
 		
-func handle_idle_animation() -> void:
-	match animated_sprite_2d.animation:
-		"up":
-			animated_sprite_2d.play("idle_backward")
-		"down":
-			animated_sprite_2d.play("idle_forward")
-				
-		
-	
-	
+#func control_animation_idle() -> void:
+	#match animated_sprite_2d.animation:
+		#"up":
+			#animated_sprite_2d.play("idle_backward")
+		#"down":
+			#animated_sprite_2d.play("idle_forward")
+					
+
+# MOVER AL JUGADOR	
 func mover_jugador(posicion_modificada: Vector2) -> void:
 		var tile_offset = 8
 		var viewport_size = get_viewport_rect().size
