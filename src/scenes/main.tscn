@@ -19,35 +19,35 @@ position = Vector2(0, 16)
 velocidad = 150
 
 [node name="linea_obstaculo2" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
-position = Vector2(3, 70)
+position = Vector2(0, 70)
 contador_obstaculos = 5
 distancia_entre_obstaculos = 100
 velocidad = 150
 
 [node name="linea_obstaculo3" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
-position = Vector2(80, 0)
+position = Vector2(0, 80)
 contador_obstaculos = 2
 distancia_entre_obstaculos = 80
 velocidad = 90
 
 [node name="linea_obstaculo4" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
-position = Vector2(112, 0)
+position = Vector2(0, 112)
 contador_obstaculos = 7
 velocidad = 150
 
 [node name="linea_obstaculo5" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
-position = Vector2(128, 0)
+position = Vector2(0, 128)
 velocidad = 150
 
 [node name="linea_obstaculo6" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
-position = Vector2(3, 42)
+position = Vector2(0, 42)
 velocidad = 150
 
 [node name="linea_obstaculo7" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
-position = Vector2(150, 0)
+position = Vector2(0, 150)
 velocidad = 150
 
 [node name="linea_obstaculo8" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
-position = Vector2(208, 0)
+position = Vector2(0, 208)
 contador_obstaculos = 8
 velocidad = 150
