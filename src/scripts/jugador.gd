@@ -2,19 +2,40 @@ extends Area2D
 
 class_name Jugador
 
+signal vida_perdida
+signal  game_over
+
 const INCREMENTO_POSICION = 16
+const POSICION_INICIAL_JUGADOR = Vector2(8.0 , 8.0)
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
+@onready var timer: Timer = $Timer
 
 @export var velocidad = 25
-
+@export var vidas = 3
 
 var nueva_posicion : Vector2 = Vector2.ZERO
 
 # para que arranque de frente por default, ya animado.
 func _ready() -> void:
 		animated_sprite_2d.play("idle_forward")
+		timer.timeout.connect(on_timer_timeout)
+
+
+func on_timer_timeout ():
+	print("Perdió vida")
+	vidas -= 1
+	vida_perdida.emit()
+	print("Vidas restantes = ", vidas )
 	
+	if vidas == 0:
+		print("Game-Over")
+		set_process_input(false)
+		game_over.emit()	
+	else:
+		resetear_jugador()	
+
 
 # DELTA
 func _process(delta: float) -> void:
@@ -80,3 +101,17 @@ func mover_jugador(posicion_modificada: Vector2) -> void:
 		)
 		
 		nueva_posicion = posicion_clampeada
+
+func muere() :
+	collision_shape_2d.set_deferred("disabled", true)
+	#animated_sprite_2d.play("hit")
+	set_process_input(false)
+	timer.start()
+
+
+func resetear_jugador() :
+	set_process_input(true)
+	collision_shape_2d.set_deferred("disabled", false)
+	animated_sprite_2d.play("idle_forward")
+	global_position = POSICION_INICIAL_JUGADOR
+	nueva_posicion = POSICION_INICIAL_JUGADOR

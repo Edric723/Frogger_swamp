@@ -30,8 +30,6 @@ func _process(delta: float) -> void:
 			obstaculo.position.x = nueva_posicion_x
 
 func on_jugador_entra_obstaculo(area: Area2D):
-	emit_signal("jugador_golpeado")
-
-	print("Auch")
 	if area is Jugador:
+		print("Auch")
 		jugador_golpeado.emit()
