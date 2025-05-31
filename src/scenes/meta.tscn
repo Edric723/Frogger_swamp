@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cjfh4rhn1xjwt"]
 
 [ext_resource type="Script" uid="uid://vwxrkmhq3xju" path="res://src/scripts/meta.gd" id="1_jur0t"]
-[ext_resource type="Texture2D" uid="uid://hii16oe7xe88" path="res://_assets/sprite_metas.png" id="1_kvaga"]
+[ext_resource type="Texture2D" uid="uid://hii16oe7xe88" path="res://_assets/TileSet_Decor.png" id="1_kvaga"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jur0t"]
 size = Vector2(10.75, 14)
