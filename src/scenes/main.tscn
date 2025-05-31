@@ -20,40 +20,50 @@ scale = Vector2(0.5, 0.5)
 script = ExtResource("3_o81g6")
 
 [node name="linea_obstaculo" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
-position = Vector2(0, 16)
-velocidad = 150
+z_index = 3
+position = Vector2(0, 32)
+velocidad = 140
 
 [node name="linea_obstaculo2" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
+visibility_layer = 2
+z_index = 3
 position = Vector2(0, 70)
+scale = Vector2(3, 3)
 contador_obstaculos = 5
 distancia_entre_obstaculos = 100
-velocidad = 150
+velocidad = 120
 
 [node name="linea_obstaculo3" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
+z_index = 3
 position = Vector2(0, 80)
 contador_obstaculos = 2
 distancia_entre_obstaculos = 80
 velocidad = 90
 
 [node name="linea_obstaculo4" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
+z_index = 3
 position = Vector2(0, 112)
 contador_obstaculos = 7
 velocidad = 150
 
 [node name="linea_obstaculo5" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
+z_index = 3
 position = Vector2(0, 128)
 velocidad = 150
 
 [node name="linea_obstaculo6" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
+z_index = 3
 position = Vector2(0, 42)
 velocidad = 150
 
 [node name="linea_obstaculo7" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
+z_index = 3
 position = Vector2(0, 150)
 velocidad = 150
 
 [node name="linea_obstaculo8" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
-position = Vector2(0, 208)
+z_index = 3
+position = Vector2(0, 180)
 contador_obstaculos = 8
 velocidad = 150
 

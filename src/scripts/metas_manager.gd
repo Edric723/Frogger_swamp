@@ -3,7 +3,7 @@ extends Node
 class_name MetasManager
 
 
-signal todas_las_metas_ocupada
+signal todas_las_metas_ocupadas
 signal meta_ocupada
 
 var contador_metas = 0
@@ -12,7 +12,7 @@ var metas_ocupadas = 0
 func _ready() -> void:
 	var metas = get_children() as Array[Meta]
 	contador_metas = metas.size()
-	
+
 	for meta in metas:
 		meta.entro_meta.connect(on_jugador_entro_meta)
 
@@ -23,4 +23,4 @@ func on_jugador_entro_meta():
 
 	if metas_ocupadas == contador_metas:
 		print("Metas ocupadas = " , metas_ocupadas)
-		todas_las_metas_ocupada.emit()
+		todas_las_metas_ocupadas.emit()
