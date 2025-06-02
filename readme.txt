@@ -1,8 +1,11 @@
-Entrega de Proyecto Final en Godot - Frogger.
-
 Diplomatura en desarrollo de videojuegos UNQ
+Materia: Introducción a los Videojuegos / Elementos básicos de programación.
+
 
 Alumno : Puentes, Kevin Eric
+
+Docente: Tobías Moscatelli
+Comisión: Virtual
 
 Créditos a los autores: Tomé inspiración variada, mucho visionado de videos y assets para darme ideas, aprender técnicas y mejorar en estilo.
 
@@ -13,6 +16,12 @@ Decisiones tecnicas destacables:
 				llevados a la escala que permitiera respetar las dimensiones propuestas por el proyecto.
 
 
-Ficha de Juego:
-	
-	Completar
+Pruebas realizadas:
+			- Juego probado en Godot 4.4.1
+			- Testeado en diferentes resoluciones y formatos de ventana.
+			- Se verifica que no hay errores al abrir el proyecto (main.tscn) desde el editor de Godot.
+			- Tampoco hay errores o adverencias visibles al ejecutar el proyecto.
+
+
+Observaciones:
+			- completar
