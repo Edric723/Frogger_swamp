@@ -16,6 +16,7 @@ func _ready() -> void:
 	for meta in metas:
 		meta.entro_meta.connect(on_jugador_entro_meta)
 
+
 func on_jugador_entro_meta():
 	print("Un jugador entró a la meta")
 	metas_ocupadas += 1
