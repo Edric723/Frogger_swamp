@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://brfaapyvl1v8q"]
+[gd_scene load_steps=9 format=3 uid="uid://brfaapyvl1v8q"]
 
 [ext_resource type="PackedScene" uid="uid://bliyxghbbsh3h" path="res://src/scenes/mapa.tscn" id="1_kkvs4"]
 [ext_resource type="PackedScene" uid="uid://8ugbuspd7oas" path="res://src/scenes/jugador.tscn" id="2_rr2wm"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dwsfyaq2ails4" path="res://src/scripts/game_state_manager.gd" id="5_dbro3"]
 [ext_resource type="Script" uid="uid://bxfquxwqbtmgi" path="res://src/scripts/metas_manager.gd" id="6_2lg1k"]
 [ext_resource type="PackedScene" uid="uid://cjfh4rhn1xjwt" path="res://src/scenes/meta.tscn" id="6_dbro3"]
+[ext_resource type="PackedScene" uid="uid://gvrr7ct0jdht" path="res://src/scenes/hud.tscn" id="8_5lsyw"]
 
 [node name="main" type="Node"]
 
@@ -15,6 +16,7 @@
 [node name="jugador" parent="." instance=ExtResource("2_rr2wm")]
 position = Vector2(16, 16)
 scale = Vector2(0.5, 0.5)
+velocidad = 35
 
 [node name="spawner_obstaculos" type="Node" parent="."]
 script = ExtResource("3_o81g6")
@@ -66,6 +68,8 @@ z_index = 3
 position = Vector2(0, 180)
 contador_obstaculos = 8
 velocidad = 150
+
+[node name="hud" parent="." instance=ExtResource("8_5lsyw")]
 
 [node name="GameStateManager" type="Node" parent="."]
 script = ExtResource("5_dbro3")

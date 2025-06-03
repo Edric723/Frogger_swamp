@@ -9,7 +9,7 @@ signal jugador_golpeado
 @export var contador_obstaculos = 3
 @export var distancia_entre_obstaculos = 128
 @export var velocidad = 200
-@export var limite_movimiento_x = 512
+@export var limite_movimiento_x = 290
 
 var obstaculos = []
 

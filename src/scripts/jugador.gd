@@ -21,7 +21,7 @@ var nueva_posicion : Vector2 = Vector2.ZERO
 func _ready() -> void:
 		animated_sprite_2d.play("idle_forward")
 		timer.timeout.connect(on_timer_timeout)
-
+		
 
 func on_timer_timeout ():
 	print("Perdió vida")

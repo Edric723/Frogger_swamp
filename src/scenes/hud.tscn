@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://gvrr7ct0jdht"]
+
+[ext_resource type="Script" uid="uid://7o7y6m2j6ysq" path="res://src/scripts/hud.gd" id="1_byxfp"]
+
+[sub_resource type="SystemFont" id="SystemFont_byxfp"]
+font_italic = true
+
+[node name="hud" type="CanvasLayer"]
+script = ExtResource("1_byxfp")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_direction = 3
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+alignment = 2
+
+[node name="vidas" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_constants/separation = -16
+alignment = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="resultado" type="Label" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("SystemFont_byxfp")
+theme_override_font_sizes/font_size = 9
+text = "Hoy has perdido chico,
+pero eso no tiene por qué gustarte..."
+horizontal_alignment = 1
+justification_flags = 0
+
+[node name="Button" type="Button" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Restart"
+
+[connection signal="pressed" from="MarginContainer/CenterContainer/PanelContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
