@@ -3,10 +3,12 @@ extends CanvasLayer
 class_name Hud
 
 @onready var vidas: HBoxContainer = %vidas
-@onready var center_container: CenterContainer = $MarginContainer/CenterContainer
-@onready var panel_container: PanelContainer = $MarginContainer/CenterContainer/PanelContainer
-@onready var resultado: Label = $MarginContainer/CenterContainer/PanelContainer/VBoxContainer/resultado
+@onready var resultado: Label = $Panel_Resultado/MarginContainer/GridContainer/resultado
+@onready var panel_resultado: PanelContainer = $Panel_Resultado
 @onready var fondo_vidas: ColorRect = $MarginContainer/HBoxContainer/fondo_vidas
+
+
+
 
 ## Variables
 var textura_vida = preload("res://_assets/vidas.png")
@@ -39,12 +41,13 @@ func perder_vidas():
 
 func mostrar_victoria():
 	resultado.text = "Válido para un aprobado!"
-	center_container.show()
+	panel_resultado.show()
 
 
 func mostrar_derrota():
-	#resultado.text = ""
-	center_container.show()
+	resultado.text = "Hoy has perdido chicx,\npero no tiene por qué gustarte..."
+	panel_resultado.show()
+
 
 
 func _on_button_pressed() -> void:

@@ -93,8 +93,8 @@ func mover_jugador(posicion_modificada: Vector2) -> void:
 
 func muere() :
 	collision_shape_2d.set_deferred("disabled", true)
-	animated_sprite_2d.self_modulate = Color(1, 0, 0)
-	#animated_sprite_2d.play("hit")
+	#animated_sprite_2d.self_modulate = Color(1, 0, 0)
+	animated_sprite_2d.play("hit")
 	set_process_input(false)
 	timer.start()
 
