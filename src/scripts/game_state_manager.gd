@@ -24,12 +24,14 @@ func on_todas_las_metas_ocupada():
 	jugador.animated_sprite_2d.self_modulate = Color (0, 1, 0)
 	hud.mostrar_victoria()
 
+
 func on_vida_perdida():
 	hud.perder_vidas()
 
 
 func on_game_over():
 	hud.mostrar_derrota()
+
 
 func matar_jugador():
 	print("Muerte Jugador")

@@ -8,8 +8,7 @@ class_name Hud
 @onready var resultado: Label = $MarginContainer/CenterContainer/PanelContainer/VBoxContainer/resultado
 @onready var fondo_vidas: ColorRect = $MarginContainer/HBoxContainer/fondo_vidas
 
-
-
+## Variables
 var textura_vida = preload("res://_assets/vidas.png")
 var textura_vida_off = preload("res://_assets/vida_off.png")
 var textura_vidas: Array[TextureRect] = []
@@ -29,11 +28,12 @@ func crear_vidas(cantidad_vidas: int):
 	#var _textura_vida = textura_vidas.pop_back()
 	#_textura_vida.queue_free()
 
+
 func perder_vidas():
 	## Utilizo size xq es un array
 	if textura_vidas.size() > 0:
 		var textura_vida_activa = textura_vidas.pop_back()
-		## No utilizo queue_free porque cambió el display de la flexbox.
+		## No utilizo queue_free porque cambi el display de la flexbox.
 		textura_vida_activa.texture = textura_vida_off
 
 

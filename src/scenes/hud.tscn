@@ -4,6 +4,7 @@
 
 [sub_resource type="SystemFont" id="SystemFont_byxfp"]
 font_italic = true
+subpixel_positioning = 0
 
 [node name="hud" type="CanvasLayer"]
 script = ExtResource("1_byxfp")
@@ -16,6 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_bottom = 8
+metadata/_edit_use_anchors_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
 layout_direction = 3
@@ -33,25 +35,31 @@ alignment = 2
 
 [node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
 visible = false
+modulate = Color(1, 0.287307, 0.225237, 1)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/CenterContainer"]
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer/PanelContainer"]
 layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
 
 [node name="resultado" type="Label" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = SubResource("SystemFont_byxfp")
 theme_override_font_sizes/font_size = 9
-text = "Hoy has perdido chico,
-pero eso no tiene por qué gustarte..."
+text = "Hoy has perdido chicx,
+pero no tiene por qué gustarte..."
 horizontal_alignment = 1
 justification_flags = 0
 
-[node name="Button" type="Button" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer"]
+[node name="restart_button" type="Button" parent="MarginContainer/CenterContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
+action_mode = 0
 text = "Restart"
 
-[connection signal="pressed" from="MarginContainer/CenterContainer/PanelContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/CenterContainer/PanelContainer/VBoxContainer/restart_button" to="." method="_on_button_pressed"]
