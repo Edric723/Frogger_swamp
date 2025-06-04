@@ -1,6 +1,73 @@
-[gd_scene load_steps=2 format=3 uid="uid://gvrr7ct0jdht"]
+[gd_scene load_steps=9 format=3 uid="uid://gvrr7ct0jdht"]
 
 [ext_resource type="Script" uid="uid://7o7y6m2j6ysq" path="res://src/scripts/hud.gd" id="1_byxfp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygq70"]
+bg_color = Color(0.141176, 0.141176, 0.141176, 0.756863)
+border_color = Color(0.262745, 0.262745, 0.262745, 0.85098)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="Theme" id="Theme_erks1"]
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_ygq70")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erks1"]
+bg_color = Color(0.392157, 0.647059, 0.592157, 0.556863)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u5uw0"]
+bg_color = Color(0.42837, 0.803398, 1, 1)
+border_width_bottom = 1
+border_color = Color(1.34766e-06, 0.399558, 0.551824, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_byxfp"]
+bg_color = Color(1.02037e-05, 0.63478, 0.867807, 1)
+border_width_bottom = 1
+border_color = Color(1.34766e-06, 0.399558, 0.551824, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3i2um"]
+bg_color = Color(1.97336e-06, 0.395484, 0.546476, 1)
+border_width_bottom = 1
+border_color = Color(6.49765e-07, 0.327562, 0.453946, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+shadow_size = 1
+
+[sub_resource type="Theme" id="Theme_u5uw0"]
+Button/styles/hover = SubResource("StyleBoxFlat_u5uw0")
+Button/styles/normal = SubResource("StyleBoxFlat_byxfp")
+Button/styles/pressed = SubResource("StyleBoxFlat_3i2um")
 
 [node name="hud" type="CanvasLayer"]
 script = ExtResource("1_byxfp")
@@ -17,6 +84,7 @@ size_flags_vertical = 4
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = SubResource("Theme_erks1")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer"]
 layout_direction = 3
@@ -42,6 +110,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_erks1")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel_Resultado"]
 layout_mode = 2
@@ -65,7 +134,10 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = SubResource("Theme_u5uw0")
 theme_override_font_sizes/font_size = 8
+keep_pressed_outside = true
 text = "Restart"
+icon_alignment = 1
 
 [connection signal="pressed" from="Panel_Resultado/MarginContainer/GridContainer/Button" to="." method="_on_button_pressed"]
