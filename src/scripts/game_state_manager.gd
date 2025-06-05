@@ -21,7 +21,7 @@ func on_meta_ocupada():
 func on_todas_las_metas_ocupada():
 	print("GANASTE EL JUEGO!!!")
 	jugador.set_process_input(false)
-	jugador.animated_sprite_2d.self_modulate = Color (0, 1, 0)
+	jugador.animated_sprite_2d.self_modulate = Color (1, 0.4, 0)
 	hud.mostrar_victoria()
 
 

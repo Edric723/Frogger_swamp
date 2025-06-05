@@ -40,7 +40,7 @@ func perder_vidas():
 
 
 func mostrar_victoria():
-	resultado.text = "Válido para un aprobado!"
+	resultado.text = "¡Ganaste! \nVálido para un aprobado"
 	panel_resultado.show()
 
 

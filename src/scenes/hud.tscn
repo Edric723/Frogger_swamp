@@ -79,6 +79,7 @@ anchor_right = 1.0
 grow_horizontal = 0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_constants/margin_right = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -87,7 +88,6 @@ size_flags_vertical = 4
 theme = SubResource("Theme_erks1")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer"]
-layout_direction = 3
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
@@ -96,7 +96,7 @@ alignment = 2
 [node name="vidas" type="HBoxContainer" parent="MarginContainer/PanelContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_constants/separation = -16
 alignment = 2
