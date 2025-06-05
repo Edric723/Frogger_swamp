@@ -1,7 +1,6 @@
 Diplomatura en desarrollo de videojuegos UNQ
 Materia: Introducción a los Videojuegos / Elementos básicos de programación.
 
-
 Alumno : Puentes, Kevin Eric
 
 Docente: Tobías Moscatelli
@@ -13,7 +12,8 @@ Decisiones tecnicas destacables:
 			- Nombrar "metas" a lo pedido en el proyecto como "casas".
 			- Modificación en la función perder_vidas en el script hud.gd, me interesaba mostrar las vidas perdidas como vidas apagadas.
 			- Modificación de la UI, utilizando themes personalizados.
-			- Utilizar terrenos y variaciones en el eje z para coherencia visual y profundidad.
+			- Se detiene el loop de la animación de "hit", para que de la sensación correcta.
+			- Utilizar una capa extra sobre el mapa, y jugar con los niveles en el eje Z, para coherencia visual.
 			- Todos los tiles fueron diseñados en 32 * 32 px y los sprites en 64 * 64 px, han sido correctamente 
 				llevados a la escala que permitiera respetar las dimensiones propuestas por el proyecto.
 
@@ -26,4 +26,4 @@ Pruebas realizadas:
 
 
 Observaciones:
-			- ##completar
+			- #completar

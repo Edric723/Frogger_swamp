@@ -85,7 +85,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_x31eb")
 }],
-"loop": true,
+"loop": false,
 "name": &"hit",
 "speed": 5.0
 }, {
@@ -141,8 +141,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgn7w"]
-size = Vector2(16, 19)
+[sub_resource type="CircleShape2D" id="CircleShape2D_ysq4x"]
+radius = 12.0
 
 [node name="jugador" type="Area2D"]
 top_level = true
@@ -154,8 +154,8 @@ sprite_frames = SubResource("SpriteFrames_fgn7w")
 animation = &"hit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_fgn7w")
+position = Vector2(1, 1)
+shape = SubResource("CircleShape2D_ysq4x")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
