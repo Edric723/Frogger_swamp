@@ -10,6 +10,7 @@ Créditos a los autores: Tomé inspiración variada, mucho visionado de videos y
 
 Decisiones tecnicas destacables:
 			- Nombrar "metas" a lo pedido en el proyecto como "casas".
+			- Se agregó un nuevo script llamado "obstaculo.gd" el cual me permite animar el sprite del obstáculo.
 			- Modificación en la función perder_vidas en el script hud.gd, me interesaba mostrar las vidas perdidas como vidas apagadas.
 			- Modificación de la UI, utilizando themes personalizados.
 			- Se detiene el loop de la animación de "hit", para que de la sensación correcta.

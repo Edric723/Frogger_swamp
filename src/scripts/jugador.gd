@@ -91,12 +91,14 @@ func mover_jugador(posicion_modificada: Vector2) -> void:
 
 		nueva_posicion = posicion_clampeada
 
+
 func muere() :
 	collision_shape_2d.set_deferred("disabled", true)
 	#animated_sprite_2d.self_modulate = Color(1, 0, 0)
 	animated_sprite_2d.play("hit")
 	set_process_input(false)
 	timer.start()
+
 
 func resetear_jugador() :
 	set_process_input(true)

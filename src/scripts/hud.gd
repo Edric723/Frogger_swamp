@@ -5,9 +5,6 @@ class_name Hud
 @onready var vidas: HBoxContainer = %vidas
 @onready var resultado: Label = $Panel_Resultado/MarginContainer/GridContainer/resultado
 @onready var panel_resultado: PanelContainer = $Panel_Resultado
-@onready var fondo_vidas: ColorRect = $MarginContainer/HBoxContainer/fondo_vidas
-
-
 
 
 ## Variables
@@ -35,7 +32,7 @@ func perder_vidas():
 	## Utilizo size xq es un array
 	if textura_vidas.size() > 0:
 		var textura_vida_activa = textura_vidas.pop_back()
-		## No utilizo queue_free porque cambi el display de la flexbox.
+		## No utilizo queue_free porque modificaría el display de la flexbox.
 		textura_vida_activa.texture = textura_vida_off
 
 
@@ -47,7 +44,6 @@ func mostrar_victoria():
 func mostrar_derrota():
 	resultado.text = "Hoy has perdido chicx,\npero no tiene por qué gustarte..."
 	panel_resultado.show()
-
 
 
 func _on_button_pressed() -> void:
