@@ -7,10 +7,10 @@ signal jugador_golpeado
 @onready var escena_obstaculo: PackedScene = preload("res://src/scenes/obstaculo.tscn")
 
 
-@export var contador_obstaculos = 3
-@export var distancia_entre_obstaculos = 128
-@export var velocidad = 200
-@export var limite_movimiento_x = 296 #Borde derecho
+@export var contador_obstaculos : int
+@export var distancia_entre_obstaculos : int
+@export var velocidad : int
+@export var limite_movimiento_x = get_viewport_rect().size.x #Borde derecho
 
 
 var obstaculos = []
