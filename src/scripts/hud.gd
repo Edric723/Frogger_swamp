@@ -23,11 +23,6 @@ func crear_vidas(cantidad_vidas: int):
 		textura_vidas.append(texture_rect)
 
 
-#func perder_vidas():
-	#var _textura_vida = textura_vidas.pop_back()
-	#_textura_vida.queue_free()
-
-
 func perder_vidas():
 	## Utilizo size xq es un array
 	if textura_vidas.size() > 0:
