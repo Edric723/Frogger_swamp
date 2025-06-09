@@ -26,7 +26,7 @@ Pruebas realizadas:
 			- Juego probado en Godot 4.4.1
 			- Testeado en diferentes resoluciones y formatos de ventana.
 			- Se verifica que no hay errores al abrir el proyecto (main.tscn) desde el editor de Godot.
-			- Tampoco hay errores o adverencias visibles al ejecutar el proyecto.
+			- Tampoco hay errores o advertencias visibles al ejecutar el proyecto.
 
 
 Observaciones:
