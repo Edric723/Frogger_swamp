@@ -30,5 +30,5 @@ Pruebas realizadas:
 
 
 Observaciones:
-			- Pude seguir cómodamente las clases y si me ha quedado alguna duda la pude resolver con el revisionado de las clases mismas o
-				con alguna búsqueda no muy exhaustiva por la web.
+			- Pude seguir cómodamente las clases y si me ha quedado alguna duda la pude resolver con 
+				el revisionado de las clases mismas o con alguna búsqueda no muy exhaustiva por la web.
