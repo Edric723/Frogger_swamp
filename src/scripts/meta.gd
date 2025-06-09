@@ -13,4 +13,4 @@ func _on_area_entered(area: Area2D) -> void:
 	if area is Jugador:
 		entro_meta.emit()
 		meta_obtenida_sprite.show()
-		collision_shape_2d.set_deferred("disabled", false)
+		collision_shape_2d.set_deferred("disabled", true)
