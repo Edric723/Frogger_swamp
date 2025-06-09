@@ -10,7 +10,7 @@ signal jugador_golpeado
 @export var contador_obstaculos = 3
 @export var distancia_entre_obstaculos = 128
 @export var velocidad = 200
-@export var limite_movimiento_x = 290
+@export var limite_movimiento_x = 296 #Borde derecho
 
 
 var obstaculos = []
@@ -18,7 +18,7 @@ var obstaculos = []
 func _ready() -> void:
 	for i in contador_obstaculos:
 		var obstaculo = escena_obstaculo.instantiate()
-		obstaculo.position = Vector2(limite_movimiento_x + distancia_entre_obstaculos * i, 0)
+		obstaculo.position = Vector2(limite_movimiento_x + distancia_entre_obstaculos * i, 0) # Les digo desde qué X quiero que  inicien.
 		obstaculo.area_entered.connect(on_jugador_entra_obstaculo)
 		add_child(obstaculo)
 		obstaculos.append(obstaculo)
@@ -27,10 +27,11 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	for obstaculo in obstaculos:
 		var nueva_posicion_x = obstaculo.position.x - velocidad * delta
-		if nueva_posicion_x < -limite_movimiento_x:
-			obstaculo.position.x = limite_movimiento_x
-		else:
-			obstaculo.position.x = nueva_posicion_x
+		# 16 x el ancho del sprite y 0 x ser el borde izquierdo de X
+		if nueva_posicion_x + 16 < 0: 
+			nueva_posicion_x = limite_movimiento_x + distancia_entre_obstaculos * (contador_obstaculos - 1)
+		obstaculo.position.x = nueva_posicion_x
+
 
 
 func on_jugador_entra_obstaculo(area: Area2D):
