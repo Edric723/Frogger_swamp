@@ -11,8 +11,10 @@ Créditos a los autores: Tomé inspiración variada, mucho visionado de videos y
 Decisiones tecnicas destacables:
 			- Nombrar "metas" a lo pedido en el proyecto como "casas".
 			- Se agregó un nuevo script llamado "obstaculo.gd" el cual me permite animar el sprite del obstáculo.
-			- Le impuse un randomize al orden de aparición de los frames del sprite obstáculo para evitar la sincronía visual.
-			- Modificación en la función perder_vidas en el script hud.gd, me interesaba mostrar las vidas perdidas como vidas apagadas.
+			- Le impuse un randomize al orden de aparición de los frames del sprite obstáculo 
+				para evitar la sincronía visual.
+			- Modificación en la función perder_vidas en el script hud.gd, me interesaba mostrar 
+				las vidas perdidas como vidas apagadas.
 			- Modificación de la UI, utilizando themes personalizados.
 			- Se detiene el loop de la animación de "hit", para que de la sensación correcta.
 			- Utilizar una capa extra sobre el mapa, y jugar con los niveles en el eje Z, para coherencia visual.

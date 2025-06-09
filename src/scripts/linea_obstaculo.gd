@@ -20,7 +20,7 @@ func _ready() -> void:
 		var obstaculo = escena_obstaculo.instantiate()
 		# Acá le doy el valor del borde, xq si lo hago directo en el export siempre es 0 x no tener el arbol de nodos cargado.
 		limite_movimiento_x = get_viewport_rect().size.x + 16
-		obstaculo.position = Vector2(limite_movimiento_x + distancia_entre_obstaculos * i, 0) # Les digo desde qué X quiero que  inicien.
+		obstaculo.position = Vector2(limite_movimiento_x - distancia_entre_obstaculos * i, 0) # Les digo desde qué X quiero que  inicien.
 		obstaculo.area_entered.connect(on_jugador_entra_obstaculo)
 		add_child(obstaculo)
 		obstaculos.append(obstaculo)

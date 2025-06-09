@@ -27,7 +27,6 @@ position = Vector2(0, 32)
 contador_obstaculos = 3
 distancia_entre_obstaculos = 160
 velocidad = 140
-limite_movimiento_x = 294.0
 
 [node name="linea_obstaculo2" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
 visibility_layer = 2
@@ -82,8 +81,8 @@ limite_movimiento_x = 294.0
 [node name="linea_obstaculo8" parent="spawner_obstaculos" instance=ExtResource("3_32aa5")]
 z_index = 3
 position = Vector2(0, 180)
-contador_obstaculos = 8
-distancia_entre_obstaculos = 148
+contador_obstaculos = 5
+distancia_entre_obstaculos = 120
 velocidad = 150
 limite_movimiento_x = 294.0
 
